@@ -1,13 +1,24 @@
 {
   "name": "apify-gemini-research-actor",
   "version": "1.0.0",
-  "description": "Apify Actor that performs web research with Google Search, Website Content Crawler, and Google Gemini reporting.",
+  "description": "Apify Actor for end-to-end web research using Google Search, Website Content Crawler, and Google Gemini.",
   "main": "main.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
     "dev": "ts-node main.ts"
   },
+  "keywords": [
+    "apify",
+    "apify-actor",
+    "web-scraping",
+    "ai-agent",
+    "gemini",
+    "google-ai",
+    "typescript",
+    "llm-integration",
+    "web-automation"
+  ],
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "apify": "^3.1.11",
