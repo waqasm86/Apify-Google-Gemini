@@ -1,0 +1,6 @@
+{
+  "question": "Find 10 AI code assistant tools and summarize them.",
+  "maxResults": 10,
+  "geminiModel": "gemini-2.5-flash-lite",
+  "geminiApiKey": "YOUR_GEMINI_API_KEY_HERE"
+}

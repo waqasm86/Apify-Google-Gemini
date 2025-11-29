@@ -1,0 +1,56 @@
+{
+  "title": "Gemini Web Research Actor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "question": {
+      "title": "Research question",
+      "type": "string",
+      "description": "The main research question or topic to investigate.",
+      "editor": "textarea",
+      "default": "Find 10 AI code assistant tools and summarize them."
+    },
+    "searchQueries": {
+      "title": "Search queries (optional)",
+      "type": "array",
+      "description": "Custom search queries; defaults to [question] if empty.",
+      "editor": "stringList"
+    },
+    "maxResults": {
+      "title": "Max final results",
+      "type": "integer",
+      "description": "Maximum number of research items to extract and return.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 50
+    },
+    "maxSearchResultsPerQuery": {
+      "title": "Max Google search results per query",
+      "type": "integer",
+      "description": "Maximum number of search results to fetch per search query.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 50
+    },
+    "useApifyScrapers": {
+      "title": "Use Apify web scrapers",
+      "type": "boolean",
+      "description": "Enable Apify scrapers to fetch real web content. If false, uses LLM-only mode.",
+      "default": true
+    },
+    "geminiModel": {
+      "title": "Gemini model",
+      "type": "string",
+      "description": "The Google Gemini model to use for content generation and analysis.",
+      "default": "gemini-2.5-flash-lite",
+      "editor": "textfield"
+    },
+    "geminiApiKey": {
+      "title": "Gemini API key",
+      "type": "string",
+      "description": "Your Google Gemini API key. Can also be set via GEMINI_API_KEY environment variable.",
+      "editor": "textfield"
+    }
+  },
+  "required": ["question"]
+}
