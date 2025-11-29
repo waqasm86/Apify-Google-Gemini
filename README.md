@@ -1,8 +1,28 @@
 # Apify + Gemini Web Research Actor
 
+[![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Apify](https://img.shields.io/badge/Apify-Actors-0A2339)](https://apify.com/actors)
+
 An Apify Actor that performs **end-to-end web research** for a given question. The Actor discovers relevant sources with Apify Store scrapers, crawls the pages, normalizes the findings, and asks **Google Gemini** to produce a rich Markdown report.
 
 Originally built as a portfolio project for the **Applied AI Engineer** role at [Apify](https://apify.com/).
+
+## Quick Start
+
+### Apify Cloud
+
+1. Open the Actor in Apify Console and click **Run**.
+2. Paste your research question into the input (or upload `input.json`).
+3. Set the **GEMINI_API_KEY** secret (or provide `geminiApiKey` in the input).
+4. Start the run and read the generated `REPORT.md` from the run's key-value store.
+
+### Local Run
+```bash
+npm install
+export GEMINI_API_KEY="your_key"
+apify run -p input.json
+```
 
 ## What it does
 
@@ -20,27 +40,6 @@ Originally built as a portfolio project for the **Applied AI Engineer** role at 
   - [`apify/google-search-scraper`](https://apify.com/apify/google-search-scraper)
   - [`apify/website-content-crawler`](https://apify.com/apify/website-content-crawler)
 - **LLM:** Google Gemini via `@google/generative-ai`
-
-## Quick start
-
-Run the Actor on Apify cloud:
-
-1. Open the Actor in Apify Console and click **Run**.
-2. Paste your research question into the input (or upload `input.json`).
-3. Set the **GEMINI_API_KEY** secret (or provide `geminiApiKey` in the input).
-4. Click **Start** and read the generated `REPORT.md` from the run's key-value store.
-
-Run locally:
-
-```bash
-npm install
-
-# Development mode (TypeScript)
-APIFY_INPUT=$(cat input.json) npm run dev
-
-# Production bundle
-npm run build && APIFY_INPUT=$(cat input.json) npm start
-```
 
 ## Inputs
 
