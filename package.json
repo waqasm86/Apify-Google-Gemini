@@ -1,6 +1,7 @@
 {
   "name": "apify-gemini-research-actor",
   "version": "1.0.0",
+  "description": "Apify Actor that performs web research with Google Search, Website Content Crawler, and Google Gemini reporting.",
   "main": "main.js",
   "scripts": {
     "build": "tsc",
